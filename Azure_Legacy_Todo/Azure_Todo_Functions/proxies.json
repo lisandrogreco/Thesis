@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "SPA": {
+      "matchCondition": {
+        "methods": [ "GET", "HEAD", "OPTIONS" ],
+        "route": "/"
+      },
+      "backendUri": "https://[StorageAccout].blob.core.windows.net/frontend/index.html"      
+    },
+    "Static": {
+      "matchCondition": {
+        "methods": [ "GET", "HEAD", "OPTIONS" ],
+        "route": "/static/{*file}"
+      },
+      "backendUri": "https://[StorageAccout].blob.core.windows.net/frontend/static/{file}"
+    }
+  }
+}

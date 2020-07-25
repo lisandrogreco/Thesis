@@ -1,0 +1,1 @@
+﻿export const API_URI: string = "https://localhost:44343";
